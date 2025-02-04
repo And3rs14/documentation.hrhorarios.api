@@ -1,0 +1,21 @@
+meta {
+  name: Edit
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/permissions/5
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  { 
+    "name": "ban users" 
+  }
+}

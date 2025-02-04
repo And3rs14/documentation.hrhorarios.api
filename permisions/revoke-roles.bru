@@ -1,0 +1,21 @@
+meta {
+  name: revoke-roles
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{base_url}}/permissions/5/revoke-roles
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  { 
+    "roles": ["admin", "editor"] 
+  }
+}

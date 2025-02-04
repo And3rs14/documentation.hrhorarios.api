@@ -1,0 +1,21 @@
+meta {
+  name: assign-permissions
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/api/roles/4/assign-permissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  { 
+    "permissions": ["create articles", "edit articles"] 
+  }
+}

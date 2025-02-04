@@ -1,0 +1,22 @@
+meta {
+  name: revoke-permissions
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/api/roles/4/revoke-permissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  { 
+   "permissions": ["edit articles"] 
+  
+  }
+}
