@@ -5,7 +5,13 @@ meta {
 }
 
 post {
-  url: 
-  body: none
+  url: {{base_url}}/personal_user
+  body: json
   auth: none
+}
+
+body:json {
+  {
+   "user_id": 3
+  }
 }
