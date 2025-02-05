@@ -1,0 +1,22 @@
+meta {
+  name: Asignar Supervisor
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base_url}}/personal/supervision/asignar-supervisor
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "supervisor_id": 2,
+      "personal_ids": [3, 4, 5]
+  }
+}

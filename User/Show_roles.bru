@@ -1,0 +1,15 @@
+meta {
+  name: Show_roles
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/users/4/roles
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

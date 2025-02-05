@@ -1,0 +1,29 @@
+meta {
+  name: store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/personal
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "per_str_nombre_completo": "Anderson Bardales",
+      "per_str_dni": "11651444",
+      "per_int_condicion_laboral_id": 1,
+      "per_int_cargo_id": 1,
+      "per_int_actividad_directiva_id": 1,
+      "per_int_sede_id": 1,
+      "per_bol_requiere_marcacion": true,
+      "crear_usuario": false,
+      "per_int_supervisor_personal_id": 1
+  }
+}

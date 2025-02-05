@@ -1,0 +1,28 @@
+meta {
+  name: Edit
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/personal/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "per_str_nombre_completo": "Juan Pérez Actualizado",
+      "per_str_dni": "12345678",
+      "per_int_condicion_laboral_id": 1,
+      "per_int_cargo_id": 1,
+      "per_int_actividad_directiva_id": 1,
+      "per_int_sede_id": 1,
+      "per_int_supervisor_personal_id": 2,
+      "per_bol_requiere_marcacion": true
+  }
+}

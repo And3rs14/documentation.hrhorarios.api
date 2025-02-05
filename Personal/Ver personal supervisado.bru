@@ -1,0 +1,15 @@
+meta {
+  name: Ver personal supervisado
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/personal/supervision/supervisados/2
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
