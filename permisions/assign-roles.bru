@@ -1,0 +1,21 @@
+meta {
+  name: assign-roles
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/permissions/1/5ssign-roles
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  { 
+    "roles": ["admin", "editor"] 
+  }
+}
