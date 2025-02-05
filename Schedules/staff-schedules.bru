@@ -1,0 +1,15 @@
+meta {
+  name: staff-schedules
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/schedules/staff/2
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

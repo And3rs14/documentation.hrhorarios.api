@@ -1,0 +1,40 @@
+meta {
+  name: updateStaffSchedule
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/schedules/staff/8
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "year": 2023,
+    "month": 5,
+    "departmentId": 2,
+    "areaServiceId": 2,
+    "scheduleTypeId": 1,
+    "laborConditionId": 2,
+    "staff": [
+      {
+        "id": 3,
+        "shift": "M",
+        "day": 16
+      },
+      {
+        "id": 4,
+        "shift": "T",
+        "day": 17
+      }
+    ],
+    "observations": "Actualización de la programación para mayo 2023"
+  }
+  
+}

@@ -1,0 +1,40 @@
+meta {
+  name: storeStaffSchedule
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/schedules/staff
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "year": 2023,
+    "month": 5,
+    "departmentId": 2,
+    "areaServiceId": 2,
+    "scheduleTypeId": 1,
+    "laborConditionId": 2,
+    "staff": [
+      {
+        "id": 3,
+        "shift": "M",
+        "day": 15  // Día del mes
+      },
+      {
+        "id": 4,
+        "shift": "T",
+        "day": 16  // Día del mes
+      }
+    ],
+    "observations": "Observación acaasdasdasdasdasd"
+  }
+  
+}
