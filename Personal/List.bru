@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{base_url}}/personal
+  url: {{base_url}}/personal/search?search=pe
   body: none
   auth: bearer
+}
+
+params:query {
+  search: pe
 }
 
 auth:bearer {
