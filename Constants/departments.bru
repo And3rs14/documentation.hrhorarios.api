@@ -1,0 +1,15 @@
+meta {
+  name: departments
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/constants/departments
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

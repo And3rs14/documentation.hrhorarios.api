@@ -1,0 +1,15 @@
+meta {
+  name: area-services
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/constants/area-services
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

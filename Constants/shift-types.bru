@@ -1,0 +1,15 @@
+meta {
+  name: shift-types
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/constants/shift-types
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
