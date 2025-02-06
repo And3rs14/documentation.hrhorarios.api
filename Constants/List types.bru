@@ -1,0 +1,19 @@
+meta {
+  name: List types
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/constants?type=departments,area-services
+  body: none
+  auth: bearer
+}
+
+params:query {
+  type: departments,area-services
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
