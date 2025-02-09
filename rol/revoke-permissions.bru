@@ -4,8 +4,8 @@ meta {
   seq: 7
 }
 
-post {
-  url: {{base_url}}/api/roles/4/revoke-permissions
+delete {
+  url: {{base_url}}/v1/roles/5/revoke-permissions
   body: json
   auth: bearer
 }
@@ -16,7 +16,6 @@ auth:bearer {
 
 body:json {
   { 
-   "permissions": ["edit articles"] 
-  
+    "permissions": ["ver-roles", "crear-roles"] 
   }
 }

@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{base_url}}/login
+  url: {{base_url}}/v1/login
   body: json
   auth: none
 }
@@ -24,5 +24,5 @@ body:json {
 }
 
 vars:post-response {
-  access_token: res.body.token
+  access_token: res.body.data.token
 }

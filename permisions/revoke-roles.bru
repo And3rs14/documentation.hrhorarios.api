@@ -5,7 +5,7 @@ meta {
 }
 
 delete {
-  url: {{base_url}}/permissions/5/revoke-roles
+  url: {{base_url}}/v1/permissions/3/revoke-roles
   body: json
   auth: bearer
 }
@@ -16,6 +16,6 @@ auth:bearer {
 
 body:json {
   { 
-    "roles": ["admin", "editor"] 
+    "roles": ["Usuario", "Supervisor"] 
   }
 }

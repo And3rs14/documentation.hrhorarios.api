@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{base_url}}/constants?type=departments,area-services
+  url: {{base_url}}/v1/constants?type=departments,area-services,shift-types
   body: none
   auth: bearer
 }
 
 params:query {
-  type: departments,area-services
+  type: departments,area-services,shift-types
 }
 
 auth:bearer {
