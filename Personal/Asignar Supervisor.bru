@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{base_url}}/personal/supervision/asignar-supervisor
+  url: {{base_url}}/v1/personal/supervision/asignar-supervisor
   body: json
   auth: bearer
 }
@@ -17,6 +17,6 @@ auth:bearer {
 body:json {
   {
       "supervisor_id": 2,
-      "personal_ids": [6]
+      "personal_ids": [{{id_new_user}}]
   }
 }

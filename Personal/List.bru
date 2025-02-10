@@ -1,17 +1,17 @@
 meta {
   name: List
   type: http
-  seq: 1
+  seq: 2
 }
 
 get {
-  url: {{base_url}}/personal/search?search=pe
+  url: {{base_url}}/v1/personal?page=1
   body: none
   auth: bearer
 }
 
 params:query {
-  search: pe
+  page: 1
 }
 
 auth:bearer {

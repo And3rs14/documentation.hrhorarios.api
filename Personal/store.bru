@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{base_url}}/personal
+  url: {{base_url}}/v1/personal
   body: json
   auth: bearer
 }
@@ -16,14 +16,19 @@ auth:bearer {
 
 body:json {
   {
-      "per_str_nombre_completo": "Anderson Bardales",
-      "per_str_dni": "11651444",
-      "per_int_condicion_laboral_id": 1,
+      "per_str_nombres": "Juan Carlos",
+      "per_str_apellidos": "Pérez García",
+      "per_str_dni": "72144978",
+      "per_int_departamento_id": 1,
+      "per_int_area_servicio_id": 1,
       "per_int_cargo_id": 1,
+      "per_int_condicion_laboral_id": 1,
       "per_int_actividad_directiva_id": 1,
-      "per_int_sede_id": 1,
       "per_bol_requiere_marcacion": true,
-      "crear_usuario": false,
-      "per_int_supervisor_personal_id": 1
+      "per_bol_activo": true
   }
+}
+
+vars:post-response {
+  id_new_user: res.body.data.id
 }

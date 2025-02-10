@@ -1,13 +1,17 @@
 meta {
-  name: search
+  name: Search
   type: http
-  seq: 2
+  seq: 1
 }
 
 get {
-  url: {{base_url}}/personal
+  url: {{base_url}}/v1/personal/search?search=pe
   body: none
   auth: bearer
+}
+
+params:query {
+  search: pe
 }
 
 auth:bearer {
