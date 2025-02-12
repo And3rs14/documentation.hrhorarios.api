@@ -5,11 +5,15 @@ meta {
 }
 
 get {
-  url: {{base_url}}/schedules/staff/1
+  url: {{base_url}}/v1/schedules/staff/{{id_user}}
   body: none
   auth: bearer
 }
 
 auth:bearer {
   token: Bearer {{access_token}}
+}
+
+vars:pre-request {
+  id_user: 2
 }

@@ -5,11 +5,15 @@ meta {
 }
 
 get {
-  url: {{base_url}}/schedules/detail/15
+  url: {{base_url}}/v1/schedules/detail/{{id_calendario}}
   body: none
   auth: bearer
 }
 
 auth:bearer {
   token: Bearer {{access_token}}
+}
+
+vars:pre-request {
+  id_calendario: 6
 }
