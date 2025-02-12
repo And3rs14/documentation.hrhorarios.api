@@ -16,17 +16,22 @@ auth:bearer {
 
 body:json {
   {
-      "per_str_nombres": "Juan Carlos",
-      "per_str_apellidos": "Pérez García",
-      "per_str_dni": "72144978",
-      "per_int_departamento_id": 1,
-      "per_int_area_servicio_id": 1,
-      "per_int_cargo_id": 1,
-      "per_int_condicion_laboral_id": 1,
-      "per_int_actividad_directiva_id": 1,
-      "per_bol_requiere_marcacion": true,
-      "per_bol_activo": true
+    "per_str_nombres": "Juan",
+    "per_str_apellidos": "Pérez",
+    "per_str_dni": "72659355",
+    "per_int_departamento_id": 1,
+    "areas_servicios": [
+      { "id": 1 },
+      { "id": 2 }
+    ],
+    "per_int_cargo_id": 1,
+    "per_int_condicion_laboral_id": 2,
+    "per_int_actividad_directiva_id": 3,
+    "per_int_supervisor_id": 1,
+    "per_bol_requiere_marcacion": true,
+    "per_bol_activo": true
   }
+  
 }
 
 vars:post-response {
