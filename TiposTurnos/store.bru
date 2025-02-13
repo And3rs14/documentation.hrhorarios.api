@@ -1,0 +1,30 @@
+meta {
+  name: store
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/v1/tipos-turnos
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "tur_str_nombre": "Turno Noche",
+    "tur_str_abreviacion": "TN",
+    "tur_tim_inicio": "22:00:00",
+    "tur_tim_fin": "06:00:00",
+    "tur_int_total_horas": 8,
+    "tur_bol_activo": true
+  }
+}
+
+vars:post-response {
+  id_new_tipos_turnos: res.body.data.id
+}
