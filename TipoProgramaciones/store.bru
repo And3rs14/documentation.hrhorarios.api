@@ -1,0 +1,26 @@
+meta {
+  name: store
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/v1/tipos-programacion
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "tpr_str_nombre": "Turno Nocturno GAAA",
+    "tpr_bol_activo": true
+  }
+}
+
+vars:post-response {
+  id_new_tipos_programaciones: res.body.data.id
+}

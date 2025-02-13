@@ -1,0 +1,22 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/v1/tipos-programacion/{{id_new_tipos_programaciones}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "tpr_str_nombre": "Turno Matutino GAAAAAAA",
+    "tpr_bol_activo": true
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Delete
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{base_url}}/v1/tipos-programacion/{{id_new_tipos_programaciones}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

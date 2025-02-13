@@ -1,0 +1,15 @@
+meta {
+  name: Show
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/v1/tipos-programacion/{{id_new_tipos_programaciones}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
