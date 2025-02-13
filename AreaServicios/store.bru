@@ -1,0 +1,29 @@
+meta {
+  name: store
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/v1/area-services
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "are_str_nombre": "Servicio Técnico daadadas GAAAA",
+      "are_txt_descripcion": "Área encargada de brindar servicios técnicos premium",
+      "are_enu_tipo": "servicio",
+      "are_int_departamento_id": 4,
+      "are_bol_activo": true
+  }
+}
+
+vars:post-response {
+  id_new_area_servicios: res.body.data.id
+}

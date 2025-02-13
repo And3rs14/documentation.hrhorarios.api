@@ -1,0 +1,15 @@
+meta {
+  name: Show
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/v1/area-services/{{id_new_area_servicios}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
