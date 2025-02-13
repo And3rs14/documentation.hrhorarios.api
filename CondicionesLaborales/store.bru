@@ -1,0 +1,27 @@
+meta {
+  name: store
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/v1/condiciones-laborales
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "con_str_nombre": "Contrato Eventual",
+      "con_txt_descripcion": "Empleado bajo contrato eventual",
+      "con_bol_activo": true
+  }
+}
+
+vars:post-response {
+  id_new_condiciones_laborales: res.body.data.id
+}

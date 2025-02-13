@@ -1,0 +1,23 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/v1/condiciones-laborales/{{id_new_condiciones_laborales}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "con_str_nombre": "Contrato Fijo",
+      "con_txt_descripcion": "Contrato a término fijo",
+      "con_bol_activo": true
+  }
+}

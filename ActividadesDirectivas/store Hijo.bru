@@ -1,0 +1,28 @@
+meta {
+  name: store Hijo
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/v1/actividades-directivas
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "adi_str_nombre": "Coordinador General GAAAA",
+      "adi_txt_descripcion": "Encargado de coordinar el área",
+      "adi_bol_activo": true,
+      "adi_int_padre_id": 1
+  }
+}
+
+vars:post-response {
+  id_new_actividades_directivas: res.body.data.id
+}

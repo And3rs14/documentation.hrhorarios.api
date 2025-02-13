@@ -1,0 +1,15 @@
+meta {
+  name: Delete
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{base_url}}/v1/condiciones-laborales/{{id_new_condiciones_laborales}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

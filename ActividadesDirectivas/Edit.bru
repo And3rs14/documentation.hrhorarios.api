@@ -1,0 +1,24 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/v1/actividades-directivas/{{id_new_actividades_directivas}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "adi_str_nombre": "Supervisor Regional",
+      "adi_txt_descripcion": "Supervisa varias áreas",
+      "adi_bol_activo": true,
+      "adi_int_padre_id": null
+  }
+}

@@ -1,0 +1,28 @@
+meta {
+  name: store Padre
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/v1/actividades-directivas
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "adi_str_nombre": "Director General",
+      "adi_txt_descripcion": "Máxima autoridad en la organización",
+      "adi_bol_activo": true,
+      "adi_int_padre_id": null
+  }
+}
+
+vars:post-response {
+  id_new_actividades_directivas: res.body.data.id
+}

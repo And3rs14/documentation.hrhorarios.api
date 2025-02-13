@@ -1,0 +1,15 @@
+meta {
+  name: Show
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/v1/condiciones-laborales/{{id_new_condiciones_laborales}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

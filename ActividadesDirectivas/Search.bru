@@ -1,0 +1,19 @@
+meta {
+  name: Search
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v1/actividades-directivas/search?search=Jefe
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: Jefe
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
