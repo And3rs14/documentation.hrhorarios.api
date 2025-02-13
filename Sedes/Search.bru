@@ -1,0 +1,19 @@
+meta {
+  name: Search
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v1/sedes/search?search=Hospital
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: Hospital
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}

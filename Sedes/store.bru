@@ -1,0 +1,33 @@
+meta {
+  name: store
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/v1/sedes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "sed_str_nombre": "Sede Sur",
+      "sed_str_codigo": "SS002",
+      "sed_str_ciudad": "Arequipa",
+      "sed_str_pais": "Perú",
+      "sed_str_direccion": "Av. Ejemplo 123",
+      "sed_str_estado": "Activo",
+      "sed_str_telefono": "987123456",
+      "sed_str_email": "sedesur@empresa.com",
+      "sed_bol_activo": true
+  }
+}
+
+vars:post-response {
+  id_new_sedes: res.body.data.id
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/v1/sedes/{{id_new_sedes}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "sed_str_nombre": "Sede Sur Actualizada",
+      "sed_str_codigo": "SS002",
+      "sed_str_ciudad": "Arequipa",
+      "sed_str_pais": "Perú",
+      "sed_str_direccion": "Av. Actualizada 456",
+      "sed_str_estado": "Activo",
+      "sed_str_telefono": "987654321",
+      "sed_str_email": "sedesur@empresa.com",
+      "sed_bol_activo": true
+  }
+}
