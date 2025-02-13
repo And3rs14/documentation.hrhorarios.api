@@ -1,0 +1,23 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/v1/cargos/{{id_new_cargos}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "car_str_nombre": "Gerente de Tecnología",
+      "car_txt_descripcion": "Lidera la transformación digital de la empresa",
+      "car_bol_activo": true
+  }
+}

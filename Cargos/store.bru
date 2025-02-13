@@ -1,0 +1,27 @@
+meta {
+  name: store
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/v1/cargos
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "car_str_nombre": "Analista de Datos",
+      "car_txt_descripcion": "Responsable del análisis de datos en la empresa",
+      "car_bol_activo": true
+  }
+}
+
+vars:post-response {
+  id_new_cargos: res.body.data.id
+}

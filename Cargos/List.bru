@@ -1,0 +1,19 @@
+meta {
+  name: List
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v1/cargos?page=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
