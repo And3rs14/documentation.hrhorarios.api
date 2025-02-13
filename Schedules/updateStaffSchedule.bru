@@ -1,0 +1,39 @@
+meta {
+  name: updateStaffSchedule
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/v1/schedules/staff/8
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "year": 2025,
+    "month": 4,
+    "departmentId": 1,
+    "areaServiceId": 1,
+    "scheduleTypeId": 1,
+    "laborConditionId": 1,
+    "staff": [
+      {
+        "id": 7,
+        "shift": "T",
+        "day": 17
+      },
+      {
+        "id": 8,
+        "shift": "N",
+        "day": 18
+      }
+    ],
+    "observations": "Test actualización válida"
+  }
+}

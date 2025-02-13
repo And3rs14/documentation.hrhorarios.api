@@ -1,13 +1,17 @@
 meta {
   name: List
   type: http
-  seq: 1
+  seq: 2
 }
 
 get {
-  url: {{base_url}}/v1/permissions
+  url: {{base_url}}/v1/personal?page=2
   body: none
   auth: bearer
+}
+
+params:query {
+  page: 2
 }
 
 auth:bearer {

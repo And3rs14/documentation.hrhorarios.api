@@ -1,0 +1,26 @@
+meta {
+  name: Edit
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/v1/personal/{{id_new_personal}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "per_str_nombres": "Juan Actualizado",
+    "areas_servicios": [
+      { "id": 1, "activo": false },
+      { "id": 3 }
+    ]
+  }
+  
+}

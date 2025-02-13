@@ -1,11 +1,11 @@
 meta {
-  name: Store
+  name: Asignar Usuario
   type: http
-  seq: 3
+  seq: 7
 }
 
 post {
-  url: {{base_url}}/v1/roles
+  url: {{base_url}}/v1/personal/usuario/{{id_new_personal}}/asignar
   body: json
   auth: bearer
 }
@@ -16,7 +16,6 @@ auth:bearer {
 
 body:json {
   {
-    "name": "editor"
+      "user_id": 1
   }
-  
 }

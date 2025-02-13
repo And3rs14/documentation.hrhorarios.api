@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{base_url}}/api/roles/4/assign-permissions
+  url: {{base_url}}/v1/roles/5/assign-permissions
   body: json
   auth: bearer
 }
@@ -16,6 +16,6 @@ auth:bearer {
 
 body:json {
   { 
-    "permissions": ["create articles", "edit articles"] 
+    "permissions": ["ver-roles", "crear-roles"] 
   }
 }

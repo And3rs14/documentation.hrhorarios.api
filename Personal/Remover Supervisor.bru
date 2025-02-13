@@ -1,0 +1,21 @@
+meta {
+  name: Remover Supervisor
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{base_url}}/v1/personal/supervision/remover-supervisor
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+      "personal_ids": [{{id_new_personal}}]
+  }
+}

@@ -1,12 +1,12 @@
 meta {
-  name: Delete
+  name: Show_roles
   type: http
-  seq: 5
+  seq: 1
 }
 
-delete {
-  url: {{base_url}}/v1/permissions/5
-  body: json
+get {
+  url: {{base_url}}/users/4/roles
+  body: none
   auth: bearer
 }
 

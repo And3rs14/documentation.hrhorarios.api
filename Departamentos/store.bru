@@ -1,0 +1,28 @@
+meta {
+  name: store
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/v1/departaments
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "dep_str_nombre": "Marketing GAAA",
+    "dep_txt_descripcion": "Departamento de marketing y publicidad",
+    "dep_int_sede_id": 1,
+    "dep_bol_activo": true
+  }
+}
+
+vars:post-response {
+  id_new_departamento: res.body.data.id
+}

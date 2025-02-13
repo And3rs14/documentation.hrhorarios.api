@@ -1,0 +1,24 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/v1/departaments/{{id_new_departamento}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "dep_str_nombre": "ORGANO DE CONTROL INSTITUCIONAL faa",
+    "dep_txt_descripcion": "",
+    "dep_int_sede_id": 1,
+    "dep_bol_activo": true
+  }
+}

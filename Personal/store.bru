@@ -1,0 +1,39 @@
+meta {
+  name: store
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/v1/personal
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "per_str_nombres": "Juan",
+    "per_str_apellidos": "Pérez",
+    "per_str_dni": "72659355",
+    "per_int_departamento_id": 1,
+    "areas_servicios": [
+      { "id": 1 },
+      { "id": 2 }
+    ],
+    "per_int_cargo_id": 1,
+    "per_int_condicion_laboral_id": 2,
+    "per_int_actividad_directiva_id": 3,
+    "per_int_supervisor_id": 1,
+    "per_bol_requiere_marcacion": true,
+    "per_bol_activo": true
+  }
+  
+}
+
+vars:post-response {
+  id_new_personal: res.body.data.id
+}

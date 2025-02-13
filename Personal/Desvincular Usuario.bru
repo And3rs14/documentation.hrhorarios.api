@@ -1,22 +1,15 @@
 meta {
-  name: Store
+  name: Desvincular Usuario
   type: http
-  seq: 3
+  seq: 8
 }
 
 post {
-  url: {{base_url}}/v1/roles
+  url: {{base_url}}/v1/personal/usuario/{{id_new_personal}}/desvincular
   body: json
   auth: bearer
 }
 
 auth:bearer {
   token: Bearer {{access_token}}
-}
-
-body:json {
-  {
-    "name": "editor"
-  }
-  
 }

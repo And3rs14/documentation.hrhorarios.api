@@ -1,0 +1,21 @@
+meta {
+  name: revoke-role
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base_url}}/users/1/revoke-role
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  { "role": "Supervisor" }
+  
+  // { "roles": ["Administrador", "Supervisor"] }
+}

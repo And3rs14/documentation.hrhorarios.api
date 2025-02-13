@@ -1,20 +1,15 @@
 meta {
   name: Delete
   type: http
-  seq: 5
+  seq: 6
 }
 
 delete {
-  url: {{base_url}}/v1/roles/5
+  url: {{base_url}}/v1/area-services/{{id_new_area_servicios}}
   body: json
   auth: bearer
 }
 
 auth:bearer {
   token: Bearer {{access_token}}
-}
-
-body:json {
-  
-  
 }

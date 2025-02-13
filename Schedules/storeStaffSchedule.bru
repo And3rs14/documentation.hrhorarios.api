@@ -1,0 +1,45 @@
+meta {
+  name: storeStaffSchedule
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/v1/schedules/staff
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "year": 2025,
+    "month": 3,
+    "departmentId": 1,
+    "areaServiceId": 1,
+    "scheduleTypeId": 1,
+    "laborConditionId": 1,
+    "staff": [
+      {
+        "id": 7,  // ID del personal
+        "shift": "M", // Abreviación del turno (M, T, N, D)
+        "day": 17  // Día del mes
+      },
+      {
+        "id": 8,
+        "shift": "T",
+        "day": 18  // Día del mes
+      },
+      {
+        "id": 8,
+        "shift": "M",
+        "day": 18  // Día del mes
+      }
+    ],
+    "observations": "Observación acaasdasdasdasdasd"
+  }
+  
+}

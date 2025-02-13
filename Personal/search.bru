@@ -1,13 +1,17 @@
 meta {
-  name: List
+  name: Search
   type: http
   seq: 1
 }
 
 get {
-  url: {{base_url}}/v1/permissions
+  url: {{base_url}}/v1/personal/search?search=720
   body: none
   auth: bearer
+}
+
+params:query {
+  search: 720
 }
 
 auth:bearer {

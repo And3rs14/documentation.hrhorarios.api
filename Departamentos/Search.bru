@@ -1,13 +1,17 @@
 meta {
-  name: List
+  name: Search
   type: http
   seq: 1
 }
 
 get {
-  url: {{base_url}}/v1/permissions
+  url: {{base_url}}/v1/departaments/search?search=EMERGENCIA
   body: none
   auth: bearer
+}
+
+params:query {
+  search: EMERGENCIA
 }
 
 auth:bearer {
