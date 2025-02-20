@@ -1,11 +1,11 @@
 meta {
-  name: Show
+  name: Generate
   type: http
-  seq: 2
+  seq: 1
 }
 
-get {
-  url: {{base_url}}/v1/reportes/programacion/32
+post {
+  url: {{base_url}}/v1/reportes/generate/programacion/32
   body: none
   auth: bearer
 }
