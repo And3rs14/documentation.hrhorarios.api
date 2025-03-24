@@ -1,12 +1,12 @@
 meta {
-  name: Show
+  name: List Signatures
   type: http
-  seq: 5
+  seq: 2
 }
 
 get {
-  url: {{base_url}}/v1/personal/{{id_new_personal}}
-  body: none
+  url: {{base_url}}/v1/firmas-personal
+  body: multipartForm
   auth: bearer
 }
 

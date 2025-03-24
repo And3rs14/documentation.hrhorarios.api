@@ -1,0 +1,28 @@
+meta {
+  name: Update Signature
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/v1/firmas-personal/9
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:form-urlencoded {
+  : 
+}
+
+body:multipart-form {
+  firma: @file(C:\Users\PC\Desktop\firmajpg.jpg)
+  _method: PUT
+}
+
+body:file {
+  file: @file()
+}
