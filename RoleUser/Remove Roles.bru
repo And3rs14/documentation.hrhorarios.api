@@ -1,11 +1,11 @@
 meta {
-  name: Store
+  name: Remove Roles
   type: http
-  seq: 3
+  seq: 2
 }
 
-post {
-  url: {{base_url}}/v1/roles
+delete {
+  url: {{base_url}}/v1/users/1/roles
   body: json
   auth: bearer
 }
@@ -16,7 +16,6 @@ auth:bearer {
 
 body:json {
   {
-    "name": "rol prueba"
+    "roles": ["Supervisor"]
   }
-  
 }

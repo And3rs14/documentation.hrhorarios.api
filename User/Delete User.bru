@@ -1,12 +1,12 @@
 meta {
-  name: Show
+  name: Delete User
   type: http
-  seq: 2
+  seq: 8
 }
 
-get {
-  url: {{base_url}}/v1/reportes/programacion/32
-  body: none
+delete {
+  url: {{base_url}}/v1/users/6
+  body: json
   auth: bearer
 }
 

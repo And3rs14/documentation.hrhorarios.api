@@ -1,17 +1,13 @@
 meta {
-  name: Search
+  name: Generate
   type: http
   seq: 1
 }
 
-get {
-  url: {{base_url}}/v1/personal/search?search=jorge
+post {
+  url: {{base_url}}/v1/reportes/generate/programacion/32
   body: none
   auth: bearer
-}
-
-params:query {
-  search: jorge
 }
 
 auth:bearer {
