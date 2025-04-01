@@ -12,7 +12,7 @@ post {
 
 body:json {
   {
-    "dni": "12345678",
+    "dni": "89652365",
     "name": "Juan Perez",
     "password": "secret123",
     "password_confirmation": "secret123"
@@ -20,5 +20,5 @@ body:json {
 }
 
 vars:post-response {
-  access_token: res.body.token
+  access_token: res.body.data.token
 }

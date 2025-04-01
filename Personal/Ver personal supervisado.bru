@@ -5,11 +5,15 @@ meta {
 }
 
 get {
-  url: {{base_url}}/v1/personal/supervision/supervisados/1
+  url: {{base_url}}/v1/personal/supervision/supervisados/4
   body: json
   auth: bearer
 }
 
 auth:bearer {
   token: Bearer {{access_token}}
+}
+
+vars:pre-request {
+  user_id: 2
 }
