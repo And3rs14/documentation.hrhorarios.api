@@ -1,17 +1,13 @@
 meta {
-  name: List
+  name: Show User
   type: http
-  seq: 2
+  seq: 5
 }
 
 get {
-  url: {{base_url}}/v1/departaments?page=1
+  url: {{base_url}}/v1/users/1
   body: none
   auth: bearer
-}
-
-params:query {
-  page: 1
 }
 
 auth:bearer {

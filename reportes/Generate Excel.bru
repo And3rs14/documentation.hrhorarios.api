@@ -1,17 +1,13 @@
 meta {
-  name: List
+  name: Generate Excel
   type: http
-  seq: 2
+  seq: 3
 }
 
 get {
-  url: {{base_url}}/v1/departaments?page=1
+  url: {{base_url}}/v1/reportes/generate/excel/programacion/36
   body: none
   auth: bearer
-}
-
-params:query {
-  page: 1
 }
 
 auth:bearer {

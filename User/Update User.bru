@@ -1,0 +1,25 @@
+meta {
+  name: Update User
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{base_url}}/v1/users/6
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Bearer {{access_token}}
+}
+
+body:json {
+  {
+    "name": "Jorge Tenazoa Actualizado",
+    "email": "jorgetenazoa02@gmail.com",
+    "dni": "72894908",
+    "password": "11111111",
+    "personal_id": 15023
+  }
+}

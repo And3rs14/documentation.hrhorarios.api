@@ -1,17 +1,13 @@
 meta {
-  name: Search
+  name: List Roles of User
   type: http
   seq: 1
 }
 
 get {
-  url: {{base_url}}/v1/personal/search?search=jorge
+  url: {{base_url}}/v1/users/1/roles
   body: none
   auth: bearer
-}
-
-params:query {
-  search: jorge
 }
 
 auth:bearer {

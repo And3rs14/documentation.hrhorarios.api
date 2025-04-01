@@ -1,0 +1,19 @@
+meta {
+  name: View Public Schedule
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/v1/schedules/public-detail?token=eyJpZCI6IjM0IiwiZXhwIjoxNzQzMDQ0MjAzfQ==.bd7a8d43d1b3d283c47b61d8f04a026748bb0b8f7370f6c6a422dab8cbea864d
+  body: none
+  auth: none
+}
+
+params:query {
+  token: eyJpZCI6IjM0IiwiZXhwIjoxNzQzMDQ0MjAzfQ==.bd7a8d43d1b3d283c47b61d8f04a026748bb0b8f7370f6c6a422dab8cbea864d
+}
+
+vars:pre-request {
+  id_calendario: 6
+}

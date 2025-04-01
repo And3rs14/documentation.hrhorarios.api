@@ -1,17 +1,13 @@
 meta {
-  name: List
+  name: Print Schedule
   type: http
-  seq: 2
+  seq: 6
 }
 
 get {
-  url: {{base_url}}/v1/departaments?page=1
+  url: {{base_url}}/v1/schedules/print/32
   body: none
   auth: bearer
-}
-
-params:query {
-  page: 1
 }
 
 auth:bearer {

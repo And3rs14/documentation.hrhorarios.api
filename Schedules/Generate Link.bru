@@ -1,11 +1,11 @@
 meta {
-  name: staff-schedules
+  name: Generate Link
   type: http
-  seq: 3
+  seq: 7
 }
 
-get {
-  url: {{base_url}}/v1/schedules/staff/{{id_user}}
+post {
+  url: {{base_url}}/v1/schedules/generate-link/34
   body: none
   auth: bearer
 }
@@ -15,5 +15,5 @@ auth:bearer {
 }
 
 vars:pre-request {
-  id_user: 4
+  id_calendario: 6
 }
